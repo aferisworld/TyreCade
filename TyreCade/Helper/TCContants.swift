@@ -16,6 +16,7 @@ enum TCConstants {
         case Ok = "Ok"
         case EmptyInputTitle = "Empty Input"
         case EmptyInputMessage = "Please enter tyre code!"
+        case InputTextPlaceholder = "Enter Tyre Code"
     }
     
     enum StoryboardIdentifiers: String {

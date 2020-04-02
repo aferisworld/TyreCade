@@ -67,7 +67,7 @@ class CheckTyreView: UIViewController {
         inputText.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
         inputText.backgroundColor = UIColor.white
         inputText.textAlignment =  NSTextAlignment.center
-        let placeholder = NSAttributedString(string: "Enter Tyre Code", attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
+        let placeholder = NSAttributedString(string: TCConstants.TyreStrings.InputTextPlaceholder.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
         inputText.attributedPlaceholder = placeholder
         inputText.center.x = self.view.center.x // for horizontal
         inputText.center.y = self.view.center.y // for vertical
