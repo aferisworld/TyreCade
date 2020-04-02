@@ -11,8 +11,11 @@ import Foundation
 enum TCConstants {
     
     enum TyreStrings: String {
-        case WrongCodeTitle = "Wrong Car Tyre Code"
+        case WrongCodeTitle = "Wrong Tyre Code"
+        case WrongCodeMessage = "Invalid vehicle tyre code.\nPlease Enter a valid vehicle tyre code!"
         case Ok = "Ok"
+        case EmptyInputTitle = "Empty Input"
+        case EmptyInputMessage = "Please enter tyre code!"
     }
     
     enum StoryboardIdentifiers: String {

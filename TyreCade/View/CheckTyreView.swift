@@ -11,6 +11,7 @@ import UIKit
 class CheckTyreView: UIViewController {
     
     var presenter: CheckTyrePresenterProtocol?
+    var interactor: CheckTyreInteractor?
     
     let inputText: UITextField = UITextField()
     let submitButton: UIButton = UIButton()
@@ -23,8 +24,7 @@ class CheckTyreView: UIViewController {
         setUpInputText()
         
         setUpSubmitButton()
-        
-        print("CheckTyreView presenter  1 : ", presenter)
+         
     }
     
     func setUpSubmitButton() {
@@ -32,16 +32,34 @@ class CheckTyreView: UIViewController {
            submitButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
            submitButton.backgroundColor = UIColor.orange
            submitButton.setTitle("SUBMIT", for: .normal)
-           submitButton.center.x = self.view.center.x // for horizontal
-           submitButton.center.y = self.view.center.y + 60 // for vertical
+           submitButton.center.x = self.view.center.x
+           submitButton.center.y = self.view.center.y + 60
            submitButton.addTarget(self, action:#selector(self.submitButtonClicked), for: .touchUpInside)
          
            view.addSubview(submitButton)
     }
     
     @objc func submitButtonClicked() {
-        print("Button Clicked : ", self.presenter)
-        let _ = self.presenter?.interactor?.checkUserInput(input: inputText.text)
+        
+        guard let _input = inputText.text else {
+            return
+        }
+        if _input.isEmpty {
+            let title = TCConstants.TyreStrings.EmptyInputTitle.rawValue
+            let emptyInputMessage = TCConstants.TyreStrings.EmptyInputMessage.rawValue
+            self.presenter?.view?.displayTyreCodeAlertView(title: title, message: emptyInputMessage)
+            return
+        }
+        
+        if let result = self.presenter?.interactor?.checkUserInput(input: _input){
+            if result {
+                
+            }else {
+                let title = TCConstants.TyreStrings.WrongCodeTitle.rawValue
+                let wrongCodetMessage = TCConstants.TyreStrings.WrongCodeMessage.rawValue
+                self.presenter?.view?.displayTyreCodeAlertView(title: title, message: wrongCodetMessage)
+            }
+        }
     }
     
     func setUpInputText() {
@@ -78,14 +96,16 @@ class CheckTyreView: UIViewController {
 
 extension CheckTyreView: CheckTyreViewProtocol {
     
-    func displayWrongTyreCodeAlertView(message: String) {
-        //        if !message.isEmpty {
-        //            let alert = UIAlertController(title: TCConstants.TyreStrings.WrongCodeTitle.rawValue, message: message, preferredStyle: .alert)
-        //            let action = UIAlertAction(title: TCConstants.TyreStrings.Ok.rawValue, style: .default) { (action) in
-        //
-        //            }
-        //            alert.addAction(action)
-        //        }
+    
+    func displayTyreCodeAlertView(title: String, message: String) {
+        if !message.isEmpty {
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            let action = UIAlertAction(title: TCConstants.TyreStrings.Ok.rawValue, style: .default) { (action) in
+
+            }
+            alert.addAction(action)
+            present(alert, animated: true)
+        }
     }
     
     func showError() {

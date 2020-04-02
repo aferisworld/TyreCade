@@ -23,42 +23,28 @@ class CheckTyrePresenter: CheckTyrePresenterProtocol {
 }
 
 extension CheckTyrePresenter: CheckTyreInteractorOutputProtocol {
+    
+     
+    func evaluteAndProcessTyreCode(input: String?) {
+        
+        if let isInputValid = interactor?.checkUserInput(input: input) {
+            //process code
+            debugPrint("process code")
+        }else {
+            //display invalid code dialog
+            let _message = "Invalid Car Tyre Code.\nPlease Enter a valid Car Tyre Code!!"
+           // view?.displayTyreCodeAlertView(title: <#String#>, message: _message)
+        }
+        
+    }
+    
      
     
     func checkUserInput(input: String?) -> Bool {
-        
+       
          return false
-    }
-    
-    func evaluteAndProcessTyreCode(input: String) {
-        
     }
     
     
 }
-
-//extension CheckTyrePresenter: CheckTyreInteractorProtocol {
-//
-//
-//
-//     func checkUserInput(input: String?) -> Bool {
-//        return false
-//    }
-//
-//
-//
-//    func evaluteAndProcessTyreCode(input: String) {
-//        debugPrint("evaluteAndProcessTyreCode called")
-//
-//        guard let isValidCode = interactor?.checkUserInput(input: input)
-//            else { return }
-//        if isValidCode {
-//            //process code
-//        }else {
-//            //display invalid code dialog
-//            let _message = "Invalid Car Tyre Code.\nPlease Enter a valid Car Tyre Code!!"
-//            view?.displayWrongTyreCodeAlertView(message: _message)
-//        }
-//    }
-//
-//}
+ 

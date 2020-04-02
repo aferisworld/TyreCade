@@ -21,7 +21,18 @@
 		B23966F32436261E00DC1D53 /* TyreCodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F22436261E00DC1D53 /* TyreCodesView.swift */; };
 		B23966F62436268400DC1D53 /* TCContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F52436268400DC1D53 /* TCContants.swift */; };
 		B23966F8243628DB00DC1D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F7243628DB00DC1D53 /* ViewController.swift */; };
+		B239670024364ADF00DC1D53 /* TyreCadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966FF24364ADF00DC1D53 /* TyreCadeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B239670224364ADF00DC1D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B23966C124361EBD00DC1D53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B23966C824361EBD00DC1D53;
+			remoteInfo = TyreCade;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		B23966C924361EBD00DC1D53 /* TyreCade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyreCade.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -40,10 +51,20 @@
 		B23966F22436261E00DC1D53 /* TyreCodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodesView.swift; sourceTree = "<group>"; };
 		B23966F52436268400DC1D53 /* TCContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCContants.swift; sourceTree = "<group>"; };
 		B23966F7243628DB00DC1D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B23966FD24364ADF00DC1D53 /* TyreCadeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyreCadeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B23966FF24364ADF00DC1D53 /* TyreCadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCadeTests.swift; sourceTree = "<group>"; };
+		B239670124364ADF00DC1D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		B23966C624361EBD00DC1D53 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B23966FA24364ADF00DC1D53 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -57,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				B23966CB24361EBD00DC1D53 /* TyreCade */,
+				B23966FE24364ADF00DC1D53 /* TyreCadeTests */,
 				B23966CA24361EBD00DC1D53 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -65,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				B23966C924361EBD00DC1D53 /* TyreCade.app */,
+				B23966FD24364ADF00DC1D53 /* TyreCadeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -72,12 +95,12 @@
 		B23966CB24361EBD00DC1D53 /* TyreCade */ = {
 			isa = PBXGroup;
 			children = (
-				B23966F42436266F00DC1D53 /* Helper */,
-				B23966EF243625BB00DC1D53 /* View */,
-				B23966EB2436245800DC1D53 /* Entities */,
-				B23966E22436238000DC1D53 /* CheckTyre */,
 				B23966CC24361EBD00DC1D53 /* AppDelegate.swift */,
 				B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */,
+				B23966E22436238000DC1D53 /* CheckTyre */,
+				B23966EF243625BB00DC1D53 /* View */,
+				B23966EB2436245800DC1D53 /* Entities */,
+				B23966F42436266F00DC1D53 /* Helper */,
 				B23966D524361EBF00DC1D53 /* Assets.xcassets */,
 				B23966D724361EBF00DC1D53 /* LaunchScreen.storyboard */,
 				B23966DA24361EBF00DC1D53 /* Info.plist */,
@@ -123,6 +146,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		B23966FE24364ADF00DC1D53 /* TyreCadeTests */ = {
+			isa = PBXGroup;
+			children = (
+				B23966FF24364ADF00DC1D53 /* TyreCadeTests.swift */,
+				B239670124364ADF00DC1D53 /* Info.plist */,
+			);
+			path = TyreCadeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +175,24 @@
 			productReference = B23966C924361EBD00DC1D53 /* TyreCade.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B23966FC24364ADF00DC1D53 /* TyreCadeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B239670424364ADF00DC1D53 /* Build configuration list for PBXNativeTarget "TyreCadeTests" */;
+			buildPhases = (
+				B23966F924364ADF00DC1D53 /* Sources */,
+				B23966FA24364ADF00DC1D53 /* Frameworks */,
+				B23966FB24364ADF00DC1D53 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B239670324364ADF00DC1D53 /* PBXTargetDependency */,
+			);
+			name = TyreCadeTests;
+			productName = TyreCadeTests;
+			productReference = B23966FD24364ADF00DC1D53 /* TyreCadeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +205,10 @@
 				TargetAttributes = {
 					B23966C824361EBD00DC1D53 = {
 						CreatedOnToolsVersion = 11.3;
+					};
+					B23966FC24364ADF00DC1D53 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = B23966C824361EBD00DC1D53;
 					};
 				};
 			};
@@ -172,6 +226,7 @@
 			projectRoot = "";
 			targets = (
 				B23966C824361EBD00DC1D53 /* TyreCade */,
+				B23966FC24364ADF00DC1D53 /* TyreCadeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -183,6 +238,13 @@
 			files = (
 				B23966D924361EBF00DC1D53 /* LaunchScreen.storyboard in Resources */,
 				B23966D624361EBF00DC1D53 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B23966FB24364ADF00DC1D53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,7 +270,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B23966F924364ADF00DC1D53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B239670024364ADF00DC1D53 /* TyreCadeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B239670324364ADF00DC1D53 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B23966C824361EBD00DC1D53 /* TyreCade */;
+			targetProxy = B239670224364ADF00DC1D53 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B23966D724361EBF00DC1D53 /* LaunchScreen.storyboard */ = {
@@ -374,6 +452,46 @@
 			};
 			name = Release;
 		};
+		B239670524364ADF00DC1D53 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ32HA5J4W;
+				INFOPLIST_FILE = TyreCadeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ank.TyreCadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TyreCade.app/TyreCade";
+			};
+			name = Debug;
+		};
+		B239670624364ADF00DC1D53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ32HA5J4W;
+				INFOPLIST_FILE = TyreCadeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ank.TyreCadeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TyreCade.app/TyreCade";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -391,6 +509,15 @@
 			buildConfigurations = (
 				B23966DE24361EBF00DC1D53 /* Debug */,
 				B23966DF24361EBF00DC1D53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B239670424364ADF00DC1D53 /* Build configuration list for PBXNativeTarget "TyreCadeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B239670524364ADF00DC1D53 /* Debug */,
+				B239670624364ADF00DC1D53 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

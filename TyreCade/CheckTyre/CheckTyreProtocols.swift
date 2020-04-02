@@ -13,7 +13,7 @@ protocol CheckTyreViewProtocol: class {
     var presenter: CheckTyrePresenterProtocol? { get set }
      
     //PRESENTER -> VIEW
-    func displayWrongTyreCodeAlertView(message: String)
+    func displayTyreCodeAlertView(title: String, message: String)
     
     func showError()
     
@@ -50,8 +50,11 @@ protocol CheckTyreInteractorInputProtocol: class {
 
 protocol CheckTyreInteractorOutputProtocol: class {
 
+    //PRESENTER  ---> INTERACTOR
+    func evaluteAndProcessTyreCode(input: String?)
+    
     //INTERACTOR ---> PRESENTER
-    func evaluteAndProcessTyreCode(input: String)
+    // func evaluteAndProcessTyreCode(input: String?) -> (hasError:Bool, message: String, tyreCode:TyreCode?)
 
 }
 

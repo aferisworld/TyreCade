@@ -12,9 +12,8 @@ import Foundation
 class CheckTyreWireFrame: CheckTyreWireFrameProtocol {
      
     static func createCheckTyreModule(mainTabBarVC: UITabBarController) -> UITabBarController {
-        //debugPrint("createCheckTyreModule --> ", mainTabBarVC.viewControllers?.first?.children.first)
+        
         if let view = mainTabBarVC.viewControllers?.first?.children.first as? CheckTyreView {
-             debugPrint("createCheckTyreModule --> ", view)
             let presenter: CheckTyrePresenterProtocol & CheckTyreInteractorOutputProtocol = CheckTyrePresenter()
             let interactor: CheckTyreInteractorInputProtocol = CheckTyreInteractor()
             let wireFrame: CheckTyreWireFrameProtocol = CheckTyreWireFrame()
