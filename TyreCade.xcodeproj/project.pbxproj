@@ -9,21 +9,37 @@
 /* Begin PBXBuildFile section */
 		B23966CD24361EBD00DC1D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966CC24361EBD00DC1D53 /* AppDelegate.swift */; };
 		B23966CF24361EBD00DC1D53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */; };
-		B23966D124361EBD00DC1D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966D024361EBD00DC1D53 /* ViewController.swift */; };
-		B23966D424361EBD00DC1D53 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23966D224361EBD00DC1D53 /* Main.storyboard */; };
 		B23966D624361EBF00DC1D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23966D524361EBF00DC1D53 /* Assets.xcassets */; };
 		B23966D924361EBF00DC1D53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23966D724361EBF00DC1D53 /* LaunchScreen.storyboard */; };
+		B23966E1243622F900DC1D53 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E0243622F900DC1D53 /* MainTabBarController.swift */; };
+		B23966E42436243100DC1D53 /* CheckTyreInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E32436243100DC1D53 /* CheckTyreInteractor.swift */; };
+		B23966E82436243F00DC1D53 /* CheckTyreProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */; };
+		B23966E92436243F00DC1D53 /* CheckTyrePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E62436243F00DC1D53 /* CheckTyrePresenter.swift */; };
+		B23966EA2436243F00DC1D53 /* CheckTyreWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E72436243F00DC1D53 /* CheckTyreWireFrame.swift */; };
+		B23966EE2436259900DC1D53 /* TyreCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966ED2436259900DC1D53 /* TyreCode.swift */; };
+		B23966F1243625D200DC1D53 /* CheckTyreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F0243625D200DC1D53 /* CheckTyreView.swift */; };
+		B23966F32436261E00DC1D53 /* TyreCodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F22436261E00DC1D53 /* TyreCodesView.swift */; };
+		B23966F62436268400DC1D53 /* TCContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F52436268400DC1D53 /* TCContants.swift */; };
+		B23966F8243628DB00DC1D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F7243628DB00DC1D53 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B23966C924361EBD00DC1D53 /* TyreCade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyreCade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23966CC24361EBD00DC1D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B23966D024361EBD00DC1D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		B23966D324361EBD00DC1D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B23966D524361EBF00DC1D53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B23966D824361EBF00DC1D53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B23966DA24361EBF00DC1D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B23966E0243622F900DC1D53 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		B23966E32436243100DC1D53 /* CheckTyreInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyreInteractor.swift; sourceTree = "<group>"; };
+		B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyreProtocols.swift; sourceTree = "<group>"; };
+		B23966E62436243F00DC1D53 /* CheckTyrePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyrePresenter.swift; sourceTree = "<group>"; };
+		B23966E72436243F00DC1D53 /* CheckTyreWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyreWireFrame.swift; sourceTree = "<group>"; };
+		B23966ED2436259900DC1D53 /* TyreCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCode.swift; sourceTree = "<group>"; };
+		B23966F0243625D200DC1D53 /* CheckTyreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTyreView.swift; sourceTree = "<group>"; };
+		B23966F22436261E00DC1D53 /* TyreCodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodesView.swift; sourceTree = "<group>"; };
+		B23966F52436268400DC1D53 /* TCContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCContants.swift; sourceTree = "<group>"; };
+		B23966F7243628DB00DC1D53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,55 @@
 		B23966CB24361EBD00DC1D53 /* TyreCade */ = {
 			isa = PBXGroup;
 			children = (
+				B23966F42436266F00DC1D53 /* Helper */,
+				B23966EF243625BB00DC1D53 /* View */,
+				B23966EB2436245800DC1D53 /* Entities */,
+				B23966E22436238000DC1D53 /* CheckTyre */,
 				B23966CC24361EBD00DC1D53 /* AppDelegate.swift */,
 				B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */,
-				B23966D024361EBD00DC1D53 /* ViewController.swift */,
-				B23966D224361EBD00DC1D53 /* Main.storyboard */,
 				B23966D524361EBF00DC1D53 /* Assets.xcassets */,
 				B23966D724361EBF00DC1D53 /* LaunchScreen.storyboard */,
 				B23966DA24361EBF00DC1D53 /* Info.plist */,
+				B23966E0243622F900DC1D53 /* MainTabBarController.swift */,
+				B23966F7243628DB00DC1D53 /* ViewController.swift */,
 			);
 			path = TyreCade;
+			sourceTree = "<group>";
+		};
+		B23966E22436238000DC1D53 /* CheckTyre */ = {
+			isa = PBXGroup;
+			children = (
+				B23966E32436243100DC1D53 /* CheckTyreInteractor.swift */,
+				B23966E62436243F00DC1D53 /* CheckTyrePresenter.swift */,
+				B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */,
+				B23966E72436243F00DC1D53 /* CheckTyreWireFrame.swift */,
+			);
+			path = CheckTyre;
+			sourceTree = "<group>";
+		};
+		B23966EB2436245800DC1D53 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B23966ED2436259900DC1D53 /* TyreCode.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		B23966EF243625BB00DC1D53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B23966F0243625D200DC1D53 /* CheckTyreView.swift */,
+				B23966F22436261E00DC1D53 /* TyreCodesView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B23966F42436266F00DC1D53 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B23966F52436268400DC1D53 /* TCContants.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +183,6 @@
 			files = (
 				B23966D924361EBF00DC1D53 /* LaunchScreen.storyboard in Resources */,
 				B23966D624361EBF00DC1D53 /* Assets.xcassets in Resources */,
-				B23966D424361EBD00DC1D53 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +193,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B23966D124361EBD00DC1D53 /* ViewController.swift in Sources */,
+				B23966F1243625D200DC1D53 /* CheckTyreView.swift in Sources */,
 				B23966CD24361EBD00DC1D53 /* AppDelegate.swift in Sources */,
+				B23966E82436243F00DC1D53 /* CheckTyreProtocols.swift in Sources */,
+				B23966F62436268400DC1D53 /* TCContants.swift in Sources */,
+				B23966F32436261E00DC1D53 /* TyreCodesView.swift in Sources */,
+				B23966E1243622F900DC1D53 /* MainTabBarController.swift in Sources */,
+				B23966F8243628DB00DC1D53 /* ViewController.swift in Sources */,
+				B23966E42436243100DC1D53 /* CheckTyreInteractor.swift in Sources */,
+				B23966E92436243F00DC1D53 /* CheckTyrePresenter.swift in Sources */,
 				B23966CF24361EBD00DC1D53 /* SceneDelegate.swift in Sources */,
+				B23966EA2436243F00DC1D53 /* CheckTyreWireFrame.swift in Sources */,
+				B23966EE2436259900DC1D53 /* TyreCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B23966D224361EBD00DC1D53 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B23966D324361EBD00DC1D53 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		B23966D724361EBF00DC1D53 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,14 +343,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ32HA5J4W;
 				INFOPLIST_FILE = TyreCade/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ank.TyreCade;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ank.tyreCade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -305,14 +362,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CZ32HA5J4W;
 				INFOPLIST_FILE = TyreCade/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ank.TyreCade;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ank.tyreCade;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
