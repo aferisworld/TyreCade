@@ -13,14 +13,32 @@ import PromiseKit
 
 public class TyreCodeDao: TCDAOProtocol {
     
+    
+    public func delete(entityId: String) -> Promise<Bool> {
+       return Promise { seal in
+                guard let realm = try? Realm(), let actionObject = realm.object(ofType: TyreCodeEntity.self, forPrimaryKey: entityId) else {
+                    
+                    throw TCErrors.GenericError.TcError(error: "could not find tyre code")
+                }
+                
+                try realm.write({
+                     realm.delete(actionObject)
+                })
+                
+               
+                return seal.fulfill(true)
+            }
+    }
+    
+    
     static let shared = TyreCodeDao()
     
-    public func save(entity: (code:String, manufactureDate:Int64,expireDate:Int64?)) -> Promise<TyreCodeModel> {
+    public func save(entity: (code:String, manufactureDate:Int64, expireDate:Int64?)) -> Promise<TyreCodeModel> {
         return Promise {
             seal in
             let realm = try Realm()
             
-     
+            do {
             let tyreCodeEntity = try TyreCodeEntity(code: entity.code, manufactureDate: entity.manufactureDate, expireDate: entity.expireDate)
             
             //Write to Realm
@@ -30,9 +48,11 @@ public class TyreCodeDao: TCDAOProtocol {
                   
            let tyreCodeViewModel = TyreCodeModel(entity: tyreCodeEntity)
            
-            //throw OIErrors.ValidationError.OiError(error: "Invalid object passed to save")
-           
+            
             seal.fulfill(tyreCodeViewModel)
+            }catch {
+                throw TCErrors.ValidationError.TcError(error: "Invalid object passed to save")
+            }
         }
     }
     
@@ -56,9 +76,10 @@ public class TyreCodeDao: TCDAOProtocol {
     public func get(id: String) -> Promise<TyreCodeModel> {
         return Promise<TyreCodeModel> {
             seal in
-            guard let period = try Realm().object(ofType: TyreCodeEntity.self, forPrimaryKey: id) else {
-                throw OIErrors.GenericError.OiError(error: "No period found with id \(id)")
+            guard let tyrecode = try Realm().object(ofType: TyreCodeEntity.self, forPrimaryKey: id) else {
+                throw TCErrors.GenericError.TcError(error: "No tyre code found with id \(id)")
             }
-            seal.fulfill(PeriodModel(entity: period))
+            seal.fulfill(TyreCodeModel(entity: tyrecode))
         }
     }
+}

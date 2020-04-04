@@ -35,6 +35,7 @@ protocol CheckTyrePresenterProtocol: class {
     
     //VIEW --> PRESENTER
     func viewDidLoad()
+     
     
 }
 

@@ -12,6 +12,9 @@ class CheckTyreInteractor: CheckTyreInteractorInputProtocol {
     
     var presenter: CheckTyreInteractorOutputProtocol?
     
+    var tyreCadeFilterOptions: TyreCadeFilterOptions?
+    var tyreCadeService = TCService.shared
+    
     func evaluteAndProcessTyreCode(input: String?) {
          debugPrint("evaluteAndProcessTyreCode --->>><<<< called : \(input)")
         
