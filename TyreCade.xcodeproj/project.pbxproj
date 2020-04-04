@@ -150,7 +150,7 @@
 				B23966CC24361EBD00DC1D53 /* AppDelegate.swift */,
 				B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */,
 				B23966E22436238000DC1D53 /* CheckTyre */,
-				B23966EF243625BB00DC1D53 /* View */,
+				B23966EF243625BB00DC1D53 /* TyreCodes */,
 				B23967122438D3AA00DC1D53 /* Services */,
 				B239670824388EC300DC1D53 /* DAL */,
 				B23966F42436266F00DC1D53 /* Helper */,
@@ -167,10 +167,12 @@
 		B23966E22436238000DC1D53 /* CheckTyre */ = {
 			isa = PBXGroup;
 			children = (
-				B23966E32436243100DC1D53 /* CheckTyreInteractor.swift */,
+				B23966F0243625D200DC1D53 /* CheckTyreView.swift */,
 				B23966E62436243F00DC1D53 /* CheckTyrePresenter.swift */,
-				B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */,
+				B23966E32436243100DC1D53 /* CheckTyreInteractor.swift */,
 				B23966E72436243F00DC1D53 /* CheckTyreWireFrame.swift */,
+				B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */,
+				B239671E243901FA00DC1D53 /* Protocols */,
 			);
 			path = CheckTyre;
 			sourceTree = "<group>";
@@ -183,13 +185,12 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		B23966EF243625BB00DC1D53 /* View */ = {
+		B23966EF243625BB00DC1D53 /* TyreCodes */ = {
 			isa = PBXGroup;
 			children = (
-				B23966F0243625D200DC1D53 /* CheckTyreView.swift */,
 				B23966F22436261E00DC1D53 /* TyreCodesView.swift */,
 			);
-			path = View;
+			path = TyreCodes;
 			sourceTree = "<group>";
 		};
 		B23966F42436266F00DC1D53 /* Helper */ = {
@@ -246,6 +247,13 @@
 				B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B239671E243901FA00DC1D53 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

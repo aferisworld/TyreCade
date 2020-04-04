@@ -9,42 +9,41 @@
 import Foundation
 
 class CheckTyrePresenter: CheckTyrePresenterProtocol {
-    
+     
     var interactor: CheckTyreInteractorInputProtocol?
     
     weak var view: CheckTyreViewProtocol?
     
     var wireFrame: CheckTyreWireFrameProtocol?
+     
+    func viewDidLoad() {}
     
-    
-    func viewDidLoad() {
-        print("CheckTyrePresenter viewDidLoad called")
+    func saveTyreCode(input: String) {
+         print("saveTyreCoded called")
+        guard let interactor  = interactor  else { return  }
+        let isSaved = interactor.saveTyreCodeInDatabase(input: input)
+        if isSaved {
+            view?.displayTyreCodeAlertView(title: "Alert", message: "Tyre code successfully saved!")
+        } else {
+            view?.displayTyreCodeAlertView(title: "Error", message: "Could not save tyre code in local database.\n Please try again")
+        }
+
     }
+     
 }
 
 extension CheckTyrePresenter: CheckTyreInteractorOutputProtocol {
-    
-     
+
+
     func evaluteAndProcessTyreCode(input: String?) {
-        
-        if let isInputValid = interactor?.checkUserInput(input: input) {
-            //process code
-            debugPrint("process code")
-        }else {
-            //display invalid code dialog
-            let _message = "Invalid Car Tyre Code.\nPlease Enter a valid Car Tyre Code!!"
-           // view?.displayTyreCodeAlertView(title: <#String#>, message: _message)
-        }
-        
-    }
-    
-     
-    
+         debugPrint("evaluteAndProcessTyreCode callled")
+    } 
+
     func checkUserInput(input: String?) -> Bool {
-       
+        debugPrint("checkUserInput called")
          return false
     }
-    
-    
+
+
 }
  

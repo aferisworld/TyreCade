@@ -11,7 +11,6 @@ import UIKit
 class CheckTyreView: UIViewController {
     
     var presenter: CheckTyrePresenterProtocol?
-    var interactor: CheckTyreInteractor?
     
     let inputText: UITextField = UITextField()
     let submitButton: UIButton = UIButton()
@@ -53,7 +52,10 @@ class CheckTyreView: UIViewController {
         
         if let result = self.presenter?.interactor?.checkUserInput(input: _input){
             if result {
+                //TODO:- process code
                 
+                //TODO:- Save code in Realm
+                self.presenter?.saveTyreCode(input: _input)
             }else {
                 let title = TCConstants.TyreStrings.WrongCodeTitle.rawValue
                 let wrongCodetMessage = TCConstants.TyreStrings.WrongCodeMessage.rawValue

@@ -18,8 +18,7 @@ class CheckTyreInteractor: CheckTyreInteractorInputProtocol {
     func evaluteAndProcessTyreCode(input: String?) {
          debugPrint("evaluteAndProcessTyreCode --->>><<<< called : \(input)")
         
-    }
-     
+    } 
     
     func checkUserInput(input: String?) -> Bool {
         var result = false
@@ -36,6 +35,11 @@ class CheckTyreInteractor: CheckTyreInteractorInputProtocol {
                    result = check1 || check2
         }
         return result
+    }
+    
+    func saveTyreCodeInDatabase(input: String) -> Bool {
+           print("interactor saveTyreCodeInDatabase called")
+        return false
     }
 }
 
