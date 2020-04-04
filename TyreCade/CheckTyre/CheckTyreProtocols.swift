@@ -63,5 +63,5 @@ protocol CheckTyreWireFrameProtocol: class {
     static func createCheckTyreModule(mainTabBarVC: UITabBarController) -> UITabBarController
     
     // PRESENTER -> WIREFRAME
-    func presentResultsVC(from view:CheckTyreViewProtocol, forTyreCode tyrecode: TyreCode)
+    func presentResultsVC(from view:CheckTyreViewProtocol, code: String)
 }

@@ -33,7 +33,7 @@ class CheckTyreWireFrame: CheckTyreWireFrameProtocol {
     }
     
     
-    func presentResultsVC(from view: CheckTyreViewProtocol, forTyreCode tyrecode: TyreCode) {
+    func presentResultsVC(from view: CheckTyreViewProtocol, code: String) {
         
     }
     

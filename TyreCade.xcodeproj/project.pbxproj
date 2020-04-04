@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		347A348A8F885A7353BC4820 /* Pods_TyreCade.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A420100A24EA10DDE14EBC25 /* Pods_TyreCade.framework */; };
+		66A5B0EB7BD2559853FDC53D /* Pods_TyreCadeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03CF875E5AE43A5306FBEBAF /* Pods_TyreCadeTests.framework */; };
 		B23966CD24361EBD00DC1D53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966CC24361EBD00DC1D53 /* AppDelegate.swift */; };
 		B23966CF24361EBD00DC1D53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */; };
 		B23966D624361EBF00DC1D53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B23966D524361EBF00DC1D53 /* Assets.xcassets */; };
@@ -16,12 +18,19 @@
 		B23966E82436243F00DC1D53 /* CheckTyreProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */; };
 		B23966E92436243F00DC1D53 /* CheckTyrePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E62436243F00DC1D53 /* CheckTyrePresenter.swift */; };
 		B23966EA2436243F00DC1D53 /* CheckTyreWireFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966E72436243F00DC1D53 /* CheckTyreWireFrame.swift */; };
-		B23966EE2436259900DC1D53 /* TyreCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966ED2436259900DC1D53 /* TyreCode.swift */; };
+		B23966EE2436259900DC1D53 /* TyreCodeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966ED2436259900DC1D53 /* TyreCodeEntity.swift */; };
 		B23966F1243625D200DC1D53 /* CheckTyreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F0243625D200DC1D53 /* CheckTyreView.swift */; };
 		B23966F32436261E00DC1D53 /* TyreCodesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F22436261E00DC1D53 /* TyreCodesView.swift */; };
 		B23966F62436268400DC1D53 /* TCContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F52436268400DC1D53 /* TCContants.swift */; };
 		B23966F8243628DB00DC1D53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F7243628DB00DC1D53 /* ViewController.swift */; };
 		B239670024364ADF00DC1D53 /* TyreCadeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966FF24364ADF00DC1D53 /* TyreCadeTests.swift */; };
+		B239670A24388EF400DC1D53 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239670924388EF400DC1D53 /* DataController.swift */; };
+		B239670D2438C24600DC1D53 /* TCDAOProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239670C2438C24600DC1D53 /* TCDAOProtocol.swift */; };
+		B239670F2438CEE800DC1D53 /* FilterOptionsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239670E2438CEE800DC1D53 /* FilterOptionsProtocol.swift */; };
+		B23967112438D10B00DC1D53 /* TyreCodeDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967102438D10B00DC1D53 /* TyreCodeDao.swift */; };
+		B23967142438D3FB00DC1D53 /* TCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967132438D3FB00DC1D53 /* TCServiceProtocol.swift */; };
+		B23967162438D4BA00DC1D53 /* TCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967152438D4BA00DC1D53 /* TCService.swift */; };
+		B23967192438D8EB00DC1D53 /* TyreCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		03CF875E5AE43A5306FBEBAF /* Pods_TyreCadeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyreCadeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E8DB2E8935DFDB542B5744F /* Pods-TyreCade.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyreCade.release.xcconfig"; path = "Target Support Files/Pods-TyreCade/Pods-TyreCade.release.xcconfig"; sourceTree = "<group>"; };
+		A420100A24EA10DDE14EBC25 /* Pods_TyreCade.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TyreCade.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC1D14C7E04B01751FB8B623 /* Pods-TyreCadeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyreCadeTests.release.xcconfig"; path = "Target Support Files/Pods-TyreCadeTests/Pods-TyreCadeTests.release.xcconfig"; sourceTree = "<group>"; };
 		B23966C924361EBD00DC1D53 /* TyreCade.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TyreCade.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B23966CC24361EBD00DC1D53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,7 +59,7 @@
 		B23966E52436243F00DC1D53 /* CheckTyreProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyreProtocols.swift; sourceTree = "<group>"; };
 		B23966E62436243F00DC1D53 /* CheckTyrePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyrePresenter.swift; sourceTree = "<group>"; };
 		B23966E72436243F00DC1D53 /* CheckTyreWireFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckTyreWireFrame.swift; sourceTree = "<group>"; };
-		B23966ED2436259900DC1D53 /* TyreCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCode.swift; sourceTree = "<group>"; };
+		B23966ED2436259900DC1D53 /* TyreCodeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodeEntity.swift; sourceTree = "<group>"; };
 		B23966F0243625D200DC1D53 /* CheckTyreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTyreView.swift; sourceTree = "<group>"; };
 		B23966F22436261E00DC1D53 /* TyreCodesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodesView.swift; sourceTree = "<group>"; };
 		B23966F52436268400DC1D53 /* TCContants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCContants.swift; sourceTree = "<group>"; };
@@ -55,6 +68,15 @@
 		B23966FF24364ADF00DC1D53 /* TyreCadeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCadeTests.swift; sourceTree = "<group>"; };
 		B239670124364ADF00DC1D53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B239670724366A9700DC1D53 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		B239670924388EF400DC1D53 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		B239670C2438C24600DC1D53 /* TCDAOProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDAOProtocol.swift; sourceTree = "<group>"; };
+		B239670E2438CEE800DC1D53 /* FilterOptionsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionsProtocol.swift; sourceTree = "<group>"; };
+		B23967102438D10B00DC1D53 /* TyreCodeDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodeDao.swift; sourceTree = "<group>"; };
+		B23967132438D3FB00DC1D53 /* TCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCServiceProtocol.swift; sourceTree = "<group>"; };
+		B23967152438D4BA00DC1D53 /* TCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCService.swift; sourceTree = "<group>"; };
+		B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodeModel.swift; sourceTree = "<group>"; };
+		C3F06FC074ED553283E4ADA3 /* Pods-TyreCadeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyreCadeTests.debug.xcconfig"; path = "Target Support Files/Pods-TyreCadeTests/Pods-TyreCadeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C467DE8A51ED214B504E1924 /* Pods-TyreCade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyreCade.debug.xcconfig"; path = "Target Support Files/Pods-TyreCade/Pods-TyreCade.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347A348A8F885A7353BC4820 /* Pods_TyreCade.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,18 +92,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66A5B0EB7BD2559853FDC53D /* Pods_TyreCadeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		364858AD4983B6F30874DB1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C467DE8A51ED214B504E1924 /* Pods-TyreCade.debug.xcconfig */,
+				3E8DB2E8935DFDB542B5744F /* Pods-TyreCade.release.xcconfig */,
+				C3F06FC074ED553283E4ADA3 /* Pods-TyreCadeTests.debug.xcconfig */,
+				AC1D14C7E04B01751FB8B623 /* Pods-TyreCadeTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A91896DBA124ADF31998EED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A420100A24EA10DDE14EBC25 /* Pods_TyreCade.framework */,
+				03CF875E5AE43A5306FBEBAF /* Pods_TyreCadeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B23966C024361EBD00DC1D53 = {
 			isa = PBXGroup;
 			children = (
+				B239670B2438AA8100DC1D53 /* common */,
 				B23966CB24361EBD00DC1D53 /* TyreCade */,
 				B23966FE24364ADF00DC1D53 /* TyreCadeTests */,
 				B23966CA24361EBD00DC1D53 /* Products */,
+				364858AD4983B6F30874DB1A /* Pods */,
+				6A91896DBA124ADF31998EED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,7 +147,8 @@
 				B23966CE24361EBD00DC1D53 /* SceneDelegate.swift */,
 				B23966E22436238000DC1D53 /* CheckTyre */,
 				B23966EF243625BB00DC1D53 /* View */,
-				B23966EB2436245800DC1D53 /* Entities */,
+				B23967122438D3AA00DC1D53 /* Services */,
+				B239670824388EC300DC1D53 /* DAL */,
 				B23966F42436266F00DC1D53 /* Helper */,
 				B23966D524361EBF00DC1D53 /* Assets.xcassets */,
 				B23966D724361EBF00DC1D53 /* LaunchScreen.storyboard */,
@@ -126,7 +174,7 @@
 		B23966EB2436245800DC1D53 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
-				B23966ED2436259900DC1D53 /* TyreCode.swift */,
+				B23966ED2436259900DC1D53 /* TyreCodeEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -157,6 +205,43 @@
 			path = TyreCadeTests;
 			sourceTree = "<group>";
 		};
+		B239670824388EC300DC1D53 /* DAL */ = {
+			isa = PBXGroup;
+			children = (
+				B239670924388EF400DC1D53 /* DataController.swift */,
+				B239670C2438C24600DC1D53 /* TCDAOProtocol.swift */,
+				B23967102438D10B00DC1D53 /* TyreCodeDao.swift */,
+				B23967172438D85800DC1D53 /* Models */,
+				B23966EB2436245800DC1D53 /* Entities */,
+			);
+			path = DAL;
+			sourceTree = "<group>";
+		};
+		B239670B2438AA8100DC1D53 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				B239670E2438CEE800DC1D53 /* FilterOptionsProtocol.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
+		B23967122438D3AA00DC1D53 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B23967132438D3FB00DC1D53 /* TCServiceProtocol.swift */,
+				B23967152438D4BA00DC1D53 /* TCService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		B23967172438D85800DC1D53 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -164,9 +249,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B23966DD24361EBF00DC1D53 /* Build configuration list for PBXNativeTarget "TyreCade" */;
 			buildPhases = (
+				017544CD7095DEC69E05CC1B /* [CP] Check Pods Manifest.lock */,
 				B23966C524361EBD00DC1D53 /* Sources */,
 				B23966C624361EBD00DC1D53 /* Frameworks */,
 				B23966C724361EBD00DC1D53 /* Resources */,
+				498BC0D9C0AF4A12C2F48F49 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -181,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B239670424364ADF00DC1D53 /* Build configuration list for PBXNativeTarget "TyreCadeTests" */;
 			buildPhases = (
+				5D4F731AAD99C6D1667A6038 /* [CP] Check Pods Manifest.lock */,
 				B23966F924364ADF00DC1D53 /* Sources */,
 				B23966FA24364ADF00DC1D53 /* Frameworks */,
 				B23966FB24364ADF00DC1D53 /* Resources */,
@@ -252,6 +340,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		017544CD7095DEC69E05CC1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TyreCade-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		498BC0D9C0AF4A12C2F48F49 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TyreCade/Pods-TyreCade-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TyreCade/Pods-TyreCade-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TyreCade/Pods-TyreCade-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D4F731AAD99C6D1667A6038 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TyreCadeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B23966C524361EBD00DC1D53 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -260,15 +412,22 @@
 				B23966F1243625D200DC1D53 /* CheckTyreView.swift in Sources */,
 				B23966CD24361EBD00DC1D53 /* AppDelegate.swift in Sources */,
 				B23966E82436243F00DC1D53 /* CheckTyreProtocols.swift in Sources */,
+				B239670D2438C24600DC1D53 /* TCDAOProtocol.swift in Sources */,
+				B239670F2438CEE800DC1D53 /* FilterOptionsProtocol.swift in Sources */,
 				B23966F62436268400DC1D53 /* TCContants.swift in Sources */,
 				B23966F32436261E00DC1D53 /* TyreCodesView.swift in Sources */,
 				B23966E1243622F900DC1D53 /* MainTabBarController.swift in Sources */,
 				B23966F8243628DB00DC1D53 /* ViewController.swift in Sources */,
 				B23966E42436243100DC1D53 /* CheckTyreInteractor.swift in Sources */,
+				B23967162438D4BA00DC1D53 /* TCService.swift in Sources */,
+				B23967142438D3FB00DC1D53 /* TCServiceProtocol.swift in Sources */,
 				B23966E92436243F00DC1D53 /* CheckTyrePresenter.swift in Sources */,
 				B23966CF24361EBD00DC1D53 /* SceneDelegate.swift in Sources */,
 				B23966EA2436243F00DC1D53 /* CheckTyreWireFrame.swift in Sources */,
-				B23966EE2436259900DC1D53 /* TyreCode.swift in Sources */,
+				B239670A24388EF400DC1D53 /* DataController.swift in Sources */,
+				B23966EE2436259900DC1D53 /* TyreCodeEntity.swift in Sources */,
+				B23967112438D10B00DC1D53 /* TyreCodeDao.swift in Sources */,
+				B23967192438D8EB00DC1D53 /* TyreCodeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +577,7 @@
 		};
 		B23966DE24361EBF00DC1D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C467DE8A51ED214B504E1924 /* Pods-TyreCade.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -437,6 +597,7 @@
 		};
 		B23966DF24361EBF00DC1D53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E8DB2E8935DFDB542B5744F /* Pods-TyreCade.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -456,6 +617,7 @@
 		};
 		B239670524364ADF00DC1D53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F06FC074ED553283E4ADA3 /* Pods-TyreCadeTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -476,6 +638,7 @@
 		};
 		B239670624364ADF00DC1D53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC1D14C7E04B01751FB8B623 /* Pods-TyreCadeTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;

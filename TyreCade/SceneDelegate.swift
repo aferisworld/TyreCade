@@ -11,13 +11,17 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-
+    var dataController: DataController!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-        // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-        // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+               // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
+               // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+                
         guard let windowScene = (scene as? UIWindowScene) else { return }
+        
+        //SetUp Realm Database
+        setUpRealm()
         
         let mainVC = MainTabBarController()
         let _ = CheckTyreWireFrame.createCheckTyreModule(mainTabBarVC: mainVC)
@@ -57,6 +61,27 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func setUpRealm() {
+          
+        //SetUp Reaml
+        dataController = DataController()
+           
+        let isRealmSetUp =  dataController.setUpReamlConfiguration()
+           
+           if isRealmSetUp {
+               let currentRealmSchemaVersion = dataController.realm.configuration.schemaVersion
+               if let oldSchemaVerion = DataController.getRealmSchemaVersion() {
+                   if currentRealmSchemaVersion > oldSchemaVerion {
+                       let _ = DataController.deleteAllRealmObjects()
+                   }
+               }else{
+                   DataController.saveCurrentRealmSchemaVersion(versionNumber: currentRealmSchemaVersion)
+                   let _ = DataController.deleteAllRealmObjects()
+               }
+               
+           }
+    }
+       
 
 }
 
