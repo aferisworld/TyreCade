@@ -31,6 +31,7 @@
 		B23967142438D3FB00DC1D53 /* TCServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967132438D3FB00DC1D53 /* TCServiceProtocol.swift */; };
 		B23967162438D4BA00DC1D53 /* TCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967152438D4BA00DC1D53 /* TCService.swift */; };
 		B23967192438D8EB00DC1D53 /* TyreCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */; };
+		B239671B2438E5B000DC1D53 /* TCErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239671A2438E5B000DC1D53 /* TCErrors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		B23967132438D3FB00DC1D53 /* TCServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCServiceProtocol.swift; sourceTree = "<group>"; };
 		B23967152438D4BA00DC1D53 /* TCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCService.swift; sourceTree = "<group>"; };
 		B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCodeModel.swift; sourceTree = "<group>"; };
+		B239671A2438E5B000DC1D53 /* TCErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCErrors.swift; sourceTree = "<group>"; };
 		C3F06FC074ED553283E4ADA3 /* Pods-TyreCadeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyreCadeTests.debug.xcconfig"; path = "Target Support Files/Pods-TyreCadeTests/Pods-TyreCadeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C467DE8A51ED214B504E1924 /* Pods-TyreCade.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TyreCade.debug.xcconfig"; path = "Target Support Files/Pods-TyreCade/Pods-TyreCade.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +223,7 @@
 			isa = PBXGroup;
 			children = (
 				B239670E2438CEE800DC1D53 /* FilterOptionsProtocol.swift */,
+				B239671A2438E5B000DC1D53 /* TCErrors.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				B23966E82436243F00DC1D53 /* CheckTyreProtocols.swift in Sources */,
 				B239670D2438C24600DC1D53 /* TCDAOProtocol.swift in Sources */,
 				B239670F2438CEE800DC1D53 /* FilterOptionsProtocol.swift in Sources */,
+				B239671B2438E5B000DC1D53 /* TCErrors.swift in Sources */,
 				B23966F62436268400DC1D53 /* TCContants.swift in Sources */,
 				B23966F32436261E00DC1D53 /* TyreCodesView.swift in Sources */,
 				B23966E1243622F900DC1D53 /* MainTabBarController.swift in Sources */,
