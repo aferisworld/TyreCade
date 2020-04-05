@@ -18,16 +18,16 @@ class CheckTyrePresenter: CheckTyrePresenterProtocol {
      
     func viewDidLoad() {}
     
-    func saveTyreCode(input: String) {
-         print("saveTyreCoded called")
+    func saveTyreCode(input: String) { 
         guard let interactor  = interactor  else { return  }
-        let isSaved = interactor.saveTyreCodeInDatabase(input: input)
-        if isSaved {
-            view?.displayTyreCodeAlertView(title: "Alert", message: "Tyre code successfully saved!")
-        } else {
-            view?.displayTyreCodeAlertView(title: "Error", message: "Could not save tyre code in local database.\n Please try again")
+        
+        interactor.saveTyreCodeInDatabase(input: input) { isSaved in
+             if isSaved {
+                self.view?.displayTyreCodeAlertView(title: "Alert", message: "Tyre code successfully saved!")
+             } else {
+                self.view?.displayTyreCodeAlertView(title: "Error", message: "Could not save tyre code in local database.\n Please try again")
+             }
         }
-
     }
      
 }

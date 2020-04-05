@@ -49,7 +49,9 @@ protocol CheckTyreInteractorInputProtocol: class {
     //PRESENTER --> INTERACTOR
     func checkUserInput(input: String?) -> Bool
     
-    func saveTyreCodeInDatabase(input: String) -> Bool
+    func saveTyreCodeInDatabase(input: String, completion: @escaping ((_ isSaved: Bool) -> Void))
+    
+    func processTyreCode(input: String?) -> (code:String?, manufactureDate:Double?, expireDate:Double?)
     
 }
 

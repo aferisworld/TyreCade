@@ -21,7 +21,7 @@ public class TCService: TCServiceProtocol {
     }
  
     func save(content: Any) -> Promise<TyreCodeModel> {
-        return self.daoClient.save(entity: content as! (code:String, manufactureDate:Int64, expireDate:Int64?))
+        return self.daoClient.save(entity: content as! (code:String?, manufactureDate:Double?, expireDate:Double?))
     }
      
     public func fetch(filter: FilterOptionsProtocol, fetchType: FetchType) ->  Promise<[TyreCodeModel]> {

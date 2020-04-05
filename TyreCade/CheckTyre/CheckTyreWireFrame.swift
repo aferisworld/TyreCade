@@ -23,10 +23,7 @@ class CheckTyreWireFrame: CheckTyreWireFrameProtocol {
             presenter.interactor = interactor
             presenter.wireFrame = wireFrame
             interactor.presenter = presenter
-            
-           // let secondVC = mainTabBarVC.viewControllers?.last
-            // mainTabBarVC.viewControllers = [view, secondVC!]
-            
+             
             return mainTabBarVC
         }
         return UITabBarController()

@@ -10,24 +10,31 @@ import RealmSwift
 import SwiftyJSON
 
 public class TyreCodeEntity: Object {
-    dynamic public var code: String? //tyre code
-    let manufactureDate =  RealmOptional<Int64>() // date tyre was manufactured
-    let expireDate = RealmOptional<Int64>() // expiration date of tyre
+    @objc dynamic public var code: String? //tyre code
+    let manufactureDate =  RealmOptional<Double>() // date tyre was manufactured
+    let expireDate = RealmOptional<Double>() // expiration date of tyre
     
-    public override static func primaryKey() -> String?
-    {
+    public override static func primaryKey() -> String? {
         return "code"
     }
     
      convenience init(
-        code: String?,
-        manufactureDate: Int64?,
-        expireDate: Int64?
+        code: String,
+        manufactureDate: Double,
+        expireDate: Double
         ) {
         self.init()
         self.code = code
         self.manufactureDate.value = manufactureDate
         self.expireDate.value = expireDate
-    }  
+    }
+     
+    convenience init(tuple: (code: String?, manufactureDate: Double?, expireDate: Double?)) throws {
+        guard let code = tuple.code, let manufactureDate = tuple.manufactureDate , let expireDate = tuple.expireDate else {
+                   throw TCErrors.ValidationError.TcError(error: "Validation error")
+         }
+        
+        self.init(code: code, manufactureDate: manufactureDate, expireDate: expireDate)
+    }
     
 }

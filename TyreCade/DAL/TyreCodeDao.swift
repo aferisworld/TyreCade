@@ -33,20 +33,20 @@ public class TyreCodeDao: TCDAOProtocol {
     
     static let shared = TyreCodeDao()
     
-    public func save(entity: (code:String, manufactureDate:Int64, expireDate:Int64?)) -> Promise<TyreCodeModel> {
+    public func save(entity: (code:String?, manufactureDate:Double?, expireDate:Double?)) -> Promise<TyreCodeModel> {
         return Promise {
             seal in
             let realm = try Realm()
             
             do {
-            let tyreCodeEntity = try TyreCodeEntity(code: entity.code, manufactureDate: entity.manufactureDate, expireDate: entity.expireDate)
-            
+                let tyreCodeEntity = try TyreCodeEntity(tuple: (code: entity.code, manufactureDate: entity.manufactureDate, expireDate: entity.expireDate))
+             
             //Write to Realm
-            try realm.write {
-                realm.add(tyreCodeEntity, update: .all)
-            }
-                  
-           let tyreCodeViewModel = TyreCodeModel(entity: tyreCodeEntity)
+            try! realm.write {
+                realm.add(tyreCodeEntity)
+             }
+                 
+            let tyreCodeViewModel = TyreCodeModel(entity: tyreCodeEntity)
            
             
             seal.fulfill(tyreCodeViewModel)

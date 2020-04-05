@@ -12,11 +12,11 @@ public class TyreCodeModel  {
     
    public var code: String?
    public var formattedManufacturedDate:String?
-   public var manufactureDate:Int64?
+   public var manufactureDate:Double?
    public var formattedExpireDate:String?
-   public var expireDate:Int64?
+   public var expireDate:Double?
     
-    init(code: String?, manufactureDate: Int64?, expireDate: Int64? ) {
+    init(code: String?, manufactureDate: Double?, expireDate: Double? ) {
         self.code = code
         self.manufactureDate = manufactureDate
         self.expireDate = expireDate
@@ -27,8 +27,9 @@ public class TyreCodeModel  {
     public convenience init(entity: TyreCodeEntity) { 
         self.init(
             code: entity.code,
-            manufactureDate: Int64(entity.manufactureDate.value!),
-            expireDate: Int64(entity.expireDate.value!))
+            manufactureDate: entity.manufactureDate.value!,
+            expireDate: entity.expireDate.value!)
+        
        }
     
 }
