@@ -12,6 +12,8 @@ class TyreCodesView: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = "List of Tyre Codes"
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

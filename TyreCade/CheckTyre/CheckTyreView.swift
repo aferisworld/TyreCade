@@ -17,7 +17,12 @@ class CheckTyreView: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-     
+        
+
+       let logo = UIImage(named: "logowt1.png")
+              let imageView = UIImageView(image:logo)
+              navigationItem.titleView = imageView
+        
         setBackgroundImageView()
         
         setUpInputText()
