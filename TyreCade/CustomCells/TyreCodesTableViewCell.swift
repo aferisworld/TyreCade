@@ -25,7 +25,7 @@ class TyreCodesTableViewCell: UITableViewCell {
     let codeLabel:UILabel = {
         let label = UILabel(frame: CGRect(x: 20, y: 10, width: UIScreen.main.bounds.width - 40, height: 20))
         label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.textColor =  UIColor.red
+        label.textColor =  UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = ""
         return label

@@ -20,9 +20,11 @@ class TyreCodesView: UIViewController {
         title = TCConstants.Titles.ListCodesTitle.rawValue
         
         setUpTableView()
-        
+        presenter?.viewDidLoad() 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         presenter?.viewDidLoad()
-
     }
     
     func setUpTableView() {
