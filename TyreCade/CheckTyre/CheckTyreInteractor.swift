@@ -48,9 +48,11 @@ class CheckTyreInteractor: CheckTyreInteractorInputProtocol {
     func saveTyreCodeInDatabase(input: String, completion: @escaping ((_ isSaved: Bool) -> Void)) {
         //TODO: remove test tuple
         let tuple = (input,Double(0), Double(0))
-        tyreCadeService.save(content: tuple).done { (tyreCadeObj) in
-             let isSaved = tyreCadeObj.code?.isEmpty ?? false ? true : false
-            completion(isSaved)
+        tyreCadeService.save(content: tuple).done { _ in
+            completion(true)
+        }.catch { (error) in
+            debugPrint("Error ", error.localizedDescription)
+             completion(false)
         }
     }
 }

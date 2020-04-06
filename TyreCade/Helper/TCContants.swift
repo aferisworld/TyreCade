@@ -22,8 +22,16 @@ enum TCConstants {
         case RealmSchemaVersion = "realmSchemaVersion"
     }
     
+    enum Titles: String {
+        case ListCodesTitle = "List of Tyre Codes"
+    }
+    
     enum StoryboardIdentifiers: String {
         case MainTabBarController = "MainTabBarController"
+    }
+    
+    enum CellIdentifiers: String {
+        case TyrecodeCell = "tyrecodeCell"
     }
     
      enum Devices: String {

@@ -25,6 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let mainVC = MainTabBarController()
         let _ = CheckTyreWireFrame.createCheckTyreModule(mainTabBarVC: mainVC)
+        TyreCodesWireFrame.createTyreCodesModule(mainTabBarVC: mainVC)
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
@@ -38,6 +39,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
         // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+        
+        //Cancels all ongoing requests
+        TCAPIClient.shared.cancelAllOngoingRequests()
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -59,6 +63,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
+        
+        //Remove all requests from api client
+        TCAPIClient.shared.removeAllRequestsFromAPIClient()
     }
 
     func setUpRealm() {

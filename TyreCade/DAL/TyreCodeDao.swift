@@ -43,7 +43,7 @@ public class TyreCodeDao: TCDAOProtocol {
              
             //Write to Realm
             try! realm.write {
-                realm.add(tyreCodeEntity)
+                realm.add(tyreCodeEntity, update: .modified)
              }
                  
             let tyreCodeViewModel = TyreCodeModel(entity: tyreCodeEntity)
@@ -59,11 +59,11 @@ public class TyreCodeDao: TCDAOProtocol {
     public func fetch(filter: FilterOptionsProtocol) -> Promise<[TyreCodeModel]> {
         return Promise<[TyreCodeModel]> {
             seal in
-            let predicate = filter.getDAOSearchParams()
+            //let predicate = filter.getDAOSearchParams()
             let realm = try Realm()
             realm.refresh()
             
-            let data = try Realm().objects(TyreCodeEntity.self).filter(predicate)
+            let data = try Realm().objects(TyreCodeEntity.self) //.filter(predicate)
             let tyreCodeModels: [TyreCodeModel] = data.map {
                 tyrecode in
                 return TyreCodeModel(entity: tyrecode)
