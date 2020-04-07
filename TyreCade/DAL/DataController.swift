@@ -14,14 +14,6 @@ class DataController {
     let databaseName = "ty_db"
     
     var realm:Realm!
-     
-     static func getReaml() -> Realm? {
-        if let sceneDelegate = UIApplication.shared.connectedScenes as? SceneDelegate {
-             let reaml = sceneDelegate.dataController.realm
-             return reaml
-         }
-        return nil
-     }
 
      /**
       Sets up realm configuration
@@ -81,9 +73,10 @@ class DataController {
 
          var isDone = true
          do {
-             try DataController.getReaml()?.write {
-                 DataController.getReaml()?.refresh()
-                 DataController.getReaml()?.deleteAll()
+            let realm = try Realm()
+            try realm.write {
+                 realm.refresh()
+                 realm.deleteAll()
              }
          }catch {
              isDone = false

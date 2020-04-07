@@ -32,8 +32,7 @@ class TyreCodesPresenter: TyreCodesPresenterProtocol {
         return 1
     }
     
-    func getNumberOfTyreCodes() -> Int {
-        debugPrint("getNumberOfTyreCodes count ", tyreCodes?.count)
+    func getNumberOfTyreCodes() -> Int { 
         return tyreCodes?.count ?? 0
     }
      

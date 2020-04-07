@@ -77,7 +77,7 @@ class TCAPIClient {
     
     func removeThisRequest(thisRequest: DataRequest){
         // Remove the request from self.requests when completed
-        if let index = self.requests.index(where: {$0.request?.url == thisRequest.request?.url}) {
+        if let index = self.requests.firstIndex(where: {$0.request?.url == thisRequest.request?.url}) {
             self.requests.remove(at: index)
         }
     }
