@@ -10,6 +10,7 @@ import Foundation
 
 enum TCConstants {
     
+    
     enum TyreStrings: String {
         case WrongCodeTitle = "Wrong Tyre Code"
         case WrongCodeMessage = "Invalid vehicle tyre code.\nPlease Enter a valid vehicle tyre code!"
@@ -17,9 +18,14 @@ enum TCConstants {
         case EmptyInputTitle = "Empty Input"
         case EmptyInputMessage = "Please enter tyre code!"
         case InputTextPlaceholder = "Enter Tyre Code"
+        case Submit = "SUBMIT"
         
         //Realm
         case RealmSchemaVersion = "realmSchemaVersion"
+        
+        //UI Unit testing
+        case Testing = "TESTING"
+        case RealmInMemoryIdentifier = "TEST-DB"
     }
     
     enum Titles: String {
@@ -40,4 +46,8 @@ enum TCConstants {
       }
     
 }
+
+
+ 
+
 

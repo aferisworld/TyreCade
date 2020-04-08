@@ -16,7 +16,8 @@ class TyreCodesView: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.view.accessibilityIdentifier = TCConstants.TCViewControllerName.CheckTyreView.rawValue 
+              
         title = TCConstants.Titles.ListCodesTitle.rawValue
         
         setUpTableView()

@@ -32,6 +32,8 @@
 		B23967192438D8EB00DC1D53 /* TyreCodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23967182438D8EA00DC1D53 /* TyreCodeModel.swift */; };
 		B239671B2438E5B000DC1D53 /* TCErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239671A2438E5B000DC1D53 /* TCErrors.swift */; };
 		B239671D2438EE1C00DC1D53 /* TyreCadeFilterOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B239671C2438EE1B00DC1D53 /* TyreCadeFilterOptions.swift */; };
+		B249730C243E097100247A81 /* TyreCadeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B249730B243E097100247A81 /* TyreCadeUITests.swift */; };
+		B2497315243E44FC00247A81 /* TCContants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23966F52436268400DC1D53 /* TCContants.swift */; };
 		B24EC21C243B235600E4EFBE /* APIProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EC21B243B235600E4EFBE /* APIProtocol.swift */; };
 		B24EC21E243B23DF00E4EFBE /* TCRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EC21D243B23DF00E4EFBE /* TCRequestManager.swift */; };
 		B24EC220243B260800E4EFBE /* TCDateUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = B24EC21F243B260800E4EFBE /* TCDateUtil.swift */; };
@@ -47,6 +49,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		B239670224364ADF00DC1D53 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B23966C124361EBD00DC1D53 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B23966C824361EBD00DC1D53;
+			remoteInfo = TyreCade;
+		};
+		B249730E243E097100247A81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B23966C124361EBD00DC1D53 /* Project object */;
 			proxyType = 1;
@@ -89,6 +98,11 @@
 		B239671A2438E5B000DC1D53 /* TCErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCErrors.swift; sourceTree = "<group>"; };
 		B239671C2438EE1B00DC1D53 /* TyreCadeFilterOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCadeFilterOptions.swift; sourceTree = "<group>"; };
 		B23967222439814800DC1D53 /* logowt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logowt.png; path = ../../../../ANDROID_PROJECTS/TyreCade_0/app/src/main/res/drawable/logowt.png; sourceTree = "<group>"; };
+		B24972C1243E04F900247A81 /* TyreCadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCadeUITests.swift; sourceTree = "<group>"; };
+		B24972C3243E04F900247A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B2497309243E097100247A81 /* TyreCadeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TyreCadeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B249730B243E097100247A81 /* TyreCadeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TyreCadeUITests.swift; sourceTree = "<group>"; };
+		B249730D243E097100247A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B24EC21B243B235600E4EFBE /* APIProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProtocol.swift; sourceTree = "<group>"; };
 		B24EC21D243B23DF00E4EFBE /* TCRequestManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCRequestManager.swift; sourceTree = "<group>"; };
 		B24EC21F243B260800E4EFBE /* TCDateUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCDateUtil.swift; sourceTree = "<group>"; };
@@ -121,6 +135,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2497306243E097000247A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -149,6 +170,8 @@
 			children = (
 				B23966CB24361EBD00DC1D53 /* TyreCade */,
 				B23966FE24364ADF00DC1D53 /* TyreCadeTests */,
+				B24972C0243E04F900247A81 /* TyreCadeUITests */,
+				B249730A243E097100247A81 /* TyreCadeUITests */,
 				B23966CA24361EBD00DC1D53 /* Products */,
 				364858AD4983B6F30874DB1A /* Pods */,
 				6A91896DBA124ADF31998EED /* Frameworks */,
@@ -160,6 +183,7 @@
 			children = (
 				B23966C924361EBD00DC1D53 /* TyreCade.app */,
 				B23966FD24364ADF00DC1D53 /* TyreCadeTests.xctest */,
+				B2497309243E097100247A81 /* TyreCadeUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -285,6 +309,24 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		B24972C0243E04F900247A81 /* TyreCadeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B24972C1243E04F900247A81 /* TyreCadeUITests.swift */,
+				B24972C3243E04F900247A81 /* Info.plist */,
+			);
+			path = TyreCadeUITests;
+			sourceTree = "<group>";
+		};
+		B249730A243E097100247A81 /* TyreCadeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B249730B243E097100247A81 /* TyreCadeUITests.swift */,
+				B249730D243E097100247A81 /* Info.plist */,
+			);
+			path = TyreCadeUITests;
+			sourceTree = "<group>";
+		};
 		B24EC21A243B203D00E4EFBE /* Netwowking */ = {
 			isa = PBXGroup;
 			children = (
@@ -353,6 +395,24 @@
 			productReference = B23966FD24364ADF00DC1D53 /* TyreCadeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		B2497308243E097000247A81 /* TyreCadeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2497310243E097100247A81 /* Build configuration list for PBXNativeTarget "TyreCadeUITests" */;
+			buildPhases = (
+				B2497305243E097000247A81 /* Sources */,
+				B2497306243E097000247A81 /* Frameworks */,
+				B2497307243E097000247A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B249730F243E097100247A81 /* PBXTargetDependency */,
+			);
+			name = TyreCadeUITests;
+			productName = TyreCadeUITests;
+			productReference = B2497309243E097100247A81 /* TyreCadeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -367,6 +427,10 @@
 						CreatedOnToolsVersion = 11.3;
 					};
 					B23966FC24364ADF00DC1D53 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = B23966C824361EBD00DC1D53;
+					};
+					B2497308243E097000247A81 = {
 						CreatedOnToolsVersion = 11.3;
 						TestTargetID = B23966C824361EBD00DC1D53;
 					};
@@ -387,6 +451,7 @@
 			targets = (
 				B23966C824361EBD00DC1D53 /* TyreCade */,
 				B23966FC24364ADF00DC1D53 /* TyreCadeTests */,
+				B2497308243E097000247A81 /* TyreCadeUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -403,6 +468,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B23966FB24364ADF00DC1D53 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B2497307243E097000247A81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -521,6 +593,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B2497305243E097000247A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B2497315243E44FC00247A81 /* TCContants.swift in Sources */,
+				B249730C243E097100247A81 /* TyreCadeUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -528,6 +609,11 @@
 			isa = PBXTargetDependency;
 			target = B23966C824361EBD00DC1D53 /* TyreCade */;
 			targetProxy = B239670224364ADF00DC1D53 /* PBXContainerItemProxy */;
+		};
+		B249730F243E097100247A81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B23966C824361EBD00DC1D53 /* TyreCade */;
+			targetProxy = B249730E243E097100247A81 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -739,6 +825,44 @@
 			};
 			name = Release;
 		};
+		B2497311243E097100247A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ32HA5J4W;
+				INFOPLIST_FILE = TyreCadeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ank.TyreCadeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TyreCade;
+			};
+			name = Debug;
+		};
+		B2497312243E097100247A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CZ32HA5J4W;
+				INFOPLIST_FILE = TyreCadeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.ank.TyreCadeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TyreCade;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -765,6 +889,15 @@
 			buildConfigurations = (
 				B239670524364ADF00DC1D53 /* Debug */,
 				B239670624364ADF00DC1D53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2497310243E097100247A81 /* Build configuration list for PBXNativeTarget "TyreCadeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2497311243E097100247A81 /* Debug */,
+				B2497312243E097100247A81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

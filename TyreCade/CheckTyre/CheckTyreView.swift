@@ -23,7 +23,8 @@ class CheckTyreView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
+        self.view.accessibilityIdentifier = TCConstants.TCViewControllerName.TyreCodesView.rawValue
+        
        let logo = UIImage(named: "logowt1.png")
               let imageView = UIImageView(image:logo)
               navigationItem.titleView = imageView
@@ -39,7 +40,8 @@ class CheckTyreView: UIViewController {
     func setUpSubmitButton() {
             
         submitButton.backgroundColor = UIColor.orange
-        submitButton.setTitle("SUBMIT", for: .normal)
+        submitButton.setTitle(TCConstants.TyreStrings.Submit.rawValue , for: .normal)
+        submitButton.accessibilityIdentifier = TCConstants.TyreStrings.Submit.rawValue
         submitButton.addTarget(self, action:#selector(self.submitButtonClicked), for: .touchUpInside)
        
         view.addSubview(submitButton)

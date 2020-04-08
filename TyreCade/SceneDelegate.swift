@@ -6,6 +6,7 @@
 //  Copyright © 2020 Ank Dev. All rights reserved.
 //
 
+import RealmSwift
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -14,18 +15,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var dataController: DataController!
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-               // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-               // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-                
+              
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        //SetUp Realm Database
-        setUpRealm()
+        if CommandLine.arguments.contains(TCConstants.TyreStrings.Testing.rawValue) {
+            debugPrint("Running UI and or Unit testing...")
+            self.setRealmForTesting()
+        }else {
+            //SetUp Realm Database
+            setUpRealm()
+        }
         
         let mainVC = MainTabBarController()
-        let _ = CheckTyreWireFrame.createModule(mainTabBarVC: mainVC)  
-        let _ = TyreCodesWireFrame.createModule(mainTabBarVC: mainVC)
+        CheckTyreWireFrame.createModule(mainTabBarVC: mainVC)
+        TyreCodesWireFrame.createModule(mainTabBarVC: mainVC)
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
@@ -33,6 +36,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
          
     }
+    
+    //Set realm for UI and Unit testing
+    func setRealmForTesting() {
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = "UI-TEST-DB"
+    }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
