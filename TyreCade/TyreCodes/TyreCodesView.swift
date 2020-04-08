@@ -74,23 +74,28 @@ extension TyreCodesView : UITableViewDataSource, UITableViewDelegate {
 }
 
 extension TyreCodesView: TyreCodesViewProtocol {
-    
+     
     func showTyreCodes(with tyreCodes: [TyreCodeModel]) {
         self.tyreCadeTableView.isHidden = false
         self.tyreCadeTableView.reloadData()
     }
     
-    func showError() {
-        
-    }
-    
-    func showLoading() {
-        
-    }
-    
-    func hideLoading() {
-        
-    }
+   func displayTyreCodeAlertView(title: String, message: String) {
+          
+   }
+      
+  func showError() {
+          
+  }
+      
+  func showLoading() {
+          
+  }
+      
+  func hideLoading() {
+          
+  }
+      
     
     
 }

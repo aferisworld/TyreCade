@@ -16,18 +16,16 @@ class TyreCodesInteractor: TyreCodesInteractorProtocol {
     var tcService = TCService.shared
     
     func getTyreCodes(fetchType: FetchType) {
-        
+       
         firstly {
             tcService.fetch(filter: TyreCadeFilterOptions(), fetchType: fetchType)
         }.done {  [weak self] tyrecodes in
                 self?.presenter?.tyreCodes = tyrecodes
-                self?.presenter?.view?.showTyreCodes(with: tyrecodes) 
-            
+                self?.presenter?.view?.showTyreCodes(with: tyrecodes)
         }.catch { (error) in
             debugPrint("Error:: \(error.localizedDescription)")
             //TODO:- show error view
-        }
-        
+        } 
     }
     
     func didFetchTyreCodes(_ tyreCodes: [TyreCodeModel]) {

@@ -34,10 +34,9 @@ enum TCConstants {
         case TyrecodeCell = "tyrecodeCell"
     }
     
-     enum Devices: String {
-          case iPhoneX = "iPhone X"
-          case iPhone678 = "iPhone 6/6S/7/8"
-          case iPhonePlus = "iPhone 6+/6S+/7+/8+"
+     enum TCViewControllerName: String {
+          case CheckTyreView = "CheckTyreView"
+          case TyreCodesView = "TyreCodesView"
       }
     
 }

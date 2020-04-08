@@ -10,7 +10,7 @@ import Foundation
 
 class CheckTyrePresenter: CheckTyrePresenterProtocol {
      
-    var interactor: CheckTyreInteractorInputProtocol?
+    var interactor: CheckTyreInteractorProtocol?
     
     weak var view: CheckTyreViewProtocol?
     
@@ -18,32 +18,21 @@ class CheckTyrePresenter: CheckTyrePresenterProtocol {
      
     func viewDidLoad() {}
     
-    func saveTyreCode(input: String) { 
-        guard let interactor  = interactor  else { return  }
+    func saveTyreCode(input: String, completion: @escaping(_ isSaved:Bool) -> Void) { 
         
-        interactor.saveTyreCodeInDatabase(input: input) { isSaved in
-             if isSaved {
-                self.view?.displayTyreCodeAlertView(title: "Alert", message: "Tyre code successfully saved!")
-             } else {
-                self.view?.displayTyreCodeAlertView(title: "Error", message: "Could not save tyre code in local database.\n Please try again")
-             }
+        interactor?.saveTyreCodeInDatabase(input: input) { isSaved in
+            completion(isSaved)
         }
     }
      
-}
-
-extension CheckTyrePresenter: CheckTyreInteractorOutputProtocol {
-
-
+    
     func evaluteAndProcessTyreCode(input: String?) {
          debugPrint("evaluteAndProcessTyreCode callled")
-    } 
+    }
 
     func checkUserInput(input: String?) -> Bool {
         debugPrint("checkUserInput called")
          return false
     }
-
-
-}
- 
+    
+} 

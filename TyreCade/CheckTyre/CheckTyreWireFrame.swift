@@ -10,12 +10,12 @@ import UIKit
 import Foundation
 
 class CheckTyreWireFrame: CheckTyreWireFrameProtocol {
-     
-    static func createCheckTyreModule(mainTabBarVC: UITabBarController) -> UITabBarController {
+   
+    static func createModule(mainTabBarVC: UITabBarController) {
         
         if let view = mainTabBarVC.viewControllers?.first?.children.first as? CheckTyreView {
-            let presenter: CheckTyrePresenterProtocol & CheckTyreInteractorOutputProtocol = CheckTyrePresenter()
-            let interactor: CheckTyreInteractorInputProtocol = CheckTyreInteractor()
+            let presenter: CheckTyrePresenterProtocol = CheckTyrePresenter()
+            let interactor: CheckTyreInteractorProtocol = CheckTyreInteractor()
             let wireFrame: CheckTyreWireFrameProtocol = CheckTyreWireFrame()
 
             view.presenter = presenter
@@ -23,16 +23,14 @@ class CheckTyreWireFrame: CheckTyreWireFrameProtocol {
             presenter.interactor = interactor
             presenter.wireFrame = wireFrame
             interactor.presenter = presenter
-             
-            return mainTabBarVC
+              
         }
-        return UITabBarController()
     }
     
-    
-    func presentResultsVC(from view: CheckTyreViewProtocol, code: String) {
-        
-    }
+    func presentVC(from view: BaseViewProtocol, code: String) {
+           
+       }
+     
     
     
 }

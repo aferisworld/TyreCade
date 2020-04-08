@@ -9,11 +9,10 @@
 import Foundation
 import RealmSwift
 
-class CheckTyreInteractor: CheckTyreInteractorInputProtocol {
+class CheckTyreInteractor: CheckTyreInteractorProtocol {
+    var presenter: CheckTyrePresenterProtocol?
     
      
-    var presenter: CheckTyreInteractorOutputProtocol?
-    
     var tyreCadeFilterOptions: TyreCadeFilterOptions?
     var tyreCadeService = TCService.shared
     

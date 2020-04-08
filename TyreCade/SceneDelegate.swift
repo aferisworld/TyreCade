@@ -24,8 +24,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         setUpRealm()
         
         let mainVC = MainTabBarController()
-        let _ = CheckTyreWireFrame.createCheckTyreModule(mainTabBarVC: mainVC)
-        TyreCodesWireFrame.createTyreCodesModule(mainTabBarVC: mainVC)
+        let _ = CheckTyreWireFrame.createModule(mainTabBarVC: mainVC)  
+        let _ = TyreCodesWireFrame.createModule(mainTabBarVC: mainVC)
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene

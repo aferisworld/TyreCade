@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol TyreCodesPresenterProtocol: class {
+protocol TyreCodesPresenterProtocol: BasePresenterProtocol {
     //View
     var view: TyreCodesViewProtocol? { get set }
     
@@ -28,22 +28,16 @@ protocol TyreCodesPresenterProtocol: class {
     //For TableView methods
     func getNumberOfSections() -> Int
     func getNumberOfTyreCodes() -> Int
-    
-    
+     
 }
 
-protocol TyreCodesViewProtocol: class {
+protocol TyreCodesViewProtocol: BaseViewProtocol {
     
     var presenter: TyreCodesPresenterProtocol? { get set }
     
     //PRESENTER -> VIEW
    func showTyreCodes(with tyreCodes: [TyreCodeModel])
-   
-   func showError()
-   
-   func showLoading()
-   
-   func hideLoading()
+    
     
 }
 
@@ -56,6 +50,6 @@ protocol TyreCodesInteractorProtocol: class {
        func didFetchTyreCodes(_ tyreCodes: [TyreCodeModel])
 }
 
-protocol TyreCodesWireFrameProtocol: class { 
-      static func createTyreCodesModule(mainTabBarVC: UITabBarController)
+protocol TyreCodesWireFrameProtocol: BaseWireFrameProtocol { 
+     
 }

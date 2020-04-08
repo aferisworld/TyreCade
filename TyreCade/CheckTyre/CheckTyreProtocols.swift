@@ -9,26 +9,17 @@
 import UIKit
 import Foundation
 
-protocol CheckTyreViewProtocol: class { 
-    var presenter: CheckTyrePresenterProtocol? { get set }
+protocol CheckTyreViewProtocol: BaseViewProtocol { 
      
-    //PRESENTER -> VIEW
-    func displayTyreCodeAlertView(title: String, message: String)
-    
-    func showError()
-    
-    func showLoading()
-    
-    func hideLoading()
 }
 
  
-protocol CheckTyrePresenterProtocol: class {
+protocol CheckTyrePresenterProtocol: BasePresenterProtocol {
     //view
     var view: CheckTyreViewProtocol? { get set }
     
     //interactor
-    var interactor:CheckTyreInteractorInputProtocol? { get set }
+    var interactor: CheckTyreInteractorProtocol? { get set }
     
     //wireframe
     var wireFrame: CheckTyreWireFrameProtocol? { get set }
@@ -36,15 +27,13 @@ protocol CheckTyrePresenterProtocol: class {
     //VIEW --> PRESENTER
     func viewDidLoad()
     
-    func saveTyreCode(input: String) -> ()
-     
-    
+    func saveTyreCode(input: String, completion: @escaping(_ status:Bool) -> Void)
 }
 
 
-protocol CheckTyreInteractorInputProtocol: class {
+protocol CheckTyreInteractorProtocol: class {
     
-    var presenter: CheckTyreInteractorOutputProtocol? { get set }
+    var presenter: CheckTyrePresenterProtocol? { get set }
     
     //PRESENTER --> INTERACTOR
     func checkUserInput(input: String?) -> Bool
@@ -53,22 +42,54 @@ protocol CheckTyreInteractorInputProtocol: class {
     
     func processTyreCode(input: String?) -> (code:String?, manufactureDate:Double?, expireDate:Double?)
     
-}
-
-protocol CheckTyreInteractorOutputProtocol: class {
-
-    //PRESENTER  ---> INTERACTOR
     func evaluteAndProcessTyreCode(input: String?)
     
-    //INTERACTOR ---> PRESENTER
-    // func evaluteAndProcessTyreCode(input: String?) -> (hasError:Bool, message: String, tyreCode:TyreCode?)
-
 }
 
-protocol CheckTyreWireFrameProtocol: class {
+
+protocol CheckTyreWireFrameProtocol: BaseWireFrameProtocol {
+}
+ 
+
+//MARK:- Base Protocols
+
+protocol BaseWireFrameProtocol: class {
     
-    static func createCheckTyreModule(mainTabBarVC: UITabBarController) -> UITabBarController
+    //static func createCheckTyreModule(mainTabBarVC: UITabBarController)
+    static func createModule(mainTabBarVC: UITabBarController)
     
     // PRESENTER -> WIREFRAME
-    func presentResultsVC(from view:CheckTyreViewProtocol, code: String)
+    func presentVC(from view:BaseViewProtocol, code: String)
+}
+
+
+protocol BaseViewProtocol: class {
+     
+    //PRESENTER -> VIEW
+    func displayTyreCodeAlertView(title: String, message: String, view:UIViewController)
+    
+    func showError()
+    
+    func showLoading()
+    
+    func hideLoading()
+}
+
+extension BaseViewProtocol {
+    func displayTyreCodeAlertView(title: String, message: String, view: UIViewController) {
+    if !message.isEmpty {
+               let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+               let action = UIAlertAction(title: TCConstants.TyreStrings.Ok.rawValue, style: .default) { (action) in
+
+               }
+               alert.addAction(action)
+               view.present(alert, animated: true)
+           }
+    }
+}
+
+protocol BasePresenterProtocol: class {
+    
+    //VIEW --> PRESENTER
+    func viewDidLoad()
 }

@@ -51,7 +51,7 @@ class CheckTyreView: UIViewController {
         if _input.isEmpty {
             let title = TCConstants.TyreStrings.EmptyInputTitle.rawValue
             let emptyInputMessage = TCConstants.TyreStrings.EmptyInputMessage.rawValue
-            self.presenter?.view?.displayTyreCodeAlertView(title: title, message: emptyInputMessage)
+            self.presenter?.view?.displayTyreCodeAlertView(title: title, message: emptyInputMessage, view: self)
             return
         }
         
@@ -59,12 +59,18 @@ class CheckTyreView: UIViewController {
             if result {
                 //TODO:- process code
                 
-                //TODO:- Save code in Realm[DONE]
-                self.presenter?.saveTyreCode(input: _input)
+                //Save code in Realm[DONE]
+                self.presenter?.saveTyreCode(input: _input) { isSaved in
+                    if isSaved {
+                        self.presenter?.view?.displayTyreCodeAlertView(title: "Alert", message: "Tyre code successfully saved!", view: self)
+                    } else {
+                        self.presenter?.view?.displayTyreCodeAlertView(title: "Error", message: "Could not save tyre code in local database.\n Please try again", view: self)
+                   }
+                }
             }else {
                 let title = TCConstants.TyreStrings.WrongCodeTitle.rawValue
                 let wrongCodetMessage = TCConstants.TyreStrings.WrongCodeMessage.rawValue
-                self.presenter?.view?.displayTyreCodeAlertView(title: title, message: wrongCodetMessage)
+                self.presenter?.view?.displayTyreCodeAlertView(title: title, message: wrongCodetMessage, view: self)
             }
         }
     }
@@ -102,19 +108,7 @@ class CheckTyreView: UIViewController {
 }
 
 extension CheckTyreView: CheckTyreViewProtocol {
-    
-    
-    func displayTyreCodeAlertView(title: String, message: String) {
-        if !message.isEmpty {
-            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-            let action = UIAlertAction(title: TCConstants.TyreStrings.Ok.rawValue, style: .default) { (action) in
-
-            }
-            alert.addAction(action)
-            present(alert, animated: true)
-        }
-    }
-    
+      
     func showError() {
         
     }

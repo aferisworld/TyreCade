@@ -11,19 +11,23 @@ import UIKit
 
 class TyreCodesWireFrame: TyreCodesWireFrameProtocol {
     
-    static func createTyreCodesModule(mainTabBarVC: UITabBarController) {
+    static func createModule(mainTabBarVC: UITabBarController) {
         if let view = mainTabBarVC.viewControllers?.last?.children.last as? TyreCodesView {
-                   let presenter: TyreCodesPresenterProtocol = TyreCodesPresenter()
-                   let interactor: TyreCodesInteractorProtocol = TyreCodesInteractor()
-                   let wireFrame: TyreCodesWireFrameProtocol = TyreCodesWireFrame()
+                          let presenter: TyreCodesPresenterProtocol = TyreCodesPresenter()
+                          let interactor: TyreCodesInteractorProtocol = TyreCodesInteractor()
+                          let wireFrame: TyreCodesWireFrameProtocol = TyreCodesWireFrame()
 
-                   view.presenter = presenter
-                   presenter.view = view
-                   presenter.interactor = interactor
-                   presenter.wireFrame = wireFrame
-                   interactor.presenter = presenter
-               }
+                          view.presenter = presenter
+                          presenter.view = view
+                          presenter.interactor = interactor
+                          presenter.wireFrame = wireFrame
+                          interactor.presenter = presenter
+                      }
     }
+    
+    func presentVC(from view: BaseViewProtocol, code: String) {
+        
+    } 
     
     
 }
