@@ -18,6 +18,7 @@ PODS:
   - RealmSwift (3.20.0):
     - Realm (= 3.20.0)
   - SwiftyJSON (5.0.0)
+  - TinyConstraints (4.0.1)
 
 DEPENDENCIES:
   - Alamofire
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - PromiseKit/Alamofire (~> 6.0)
   - RealmSwift (~> 3.20.0)
   - SwiftyJSON
+  - TinyConstraints
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - Realm
     - RealmSwift
     - SwiftyJSON
+    - TinyConstraints
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -40,7 +43,8 @@ SPEC CHECKSUMS:
   Realm: 8b2ca5bc6479a91f379b6b42b5922e396cd5ba5a
   RealmSwift: 1949ef26a279e1845bd51d591b9103adfcd121df
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TinyConstraints: 8dd91295e56797648c7bc335dd20e1d91ec4c192
 
-PODFILE CHECKSUM: 13251d75f89f8c006d730e7379dc761e373c40df
+PODFILE CHECKSUM: 9ceea02e4af6333506eaf476ed55dbeed43545a5
 
 COCOAPODS: 1.9.1

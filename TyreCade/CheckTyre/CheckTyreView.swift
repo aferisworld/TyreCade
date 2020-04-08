@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import TinyConstraints
 
 class CheckTyreView: UIViewController {
     
@@ -14,6 +15,10 @@ class CheckTyreView: UIViewController {
     
     let inputText: UITextField = UITextField()
     let submitButton: UIButton = UIButton()
+    
+    let inputTextWidth = CGFloat(200)
+    let inputTextHeight = CGFloat(50)
+    let innerSpacing = CGFloat(10)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,15 +37,32 @@ class CheckTyreView: UIViewController {
     }
     
     func setUpSubmitButton() {
+            
+        submitButton.backgroundColor = UIColor.orange
+        submitButton.setTitle("SUBMIT", for: .normal)
+        submitButton.addTarget(self, action:#selector(self.submitButtonClicked), for: .touchUpInside)
+       
+        view.addSubview(submitButton)
+        submitButton.topToBottom(of: inputText, offset: innerSpacing)
+        submitButton.left(to: inputText)
+        submitButton.right(to: inputText)
+        submitButton.width(inputTextWidth)
+        submitButton.height(inputTextHeight)
            
-           submitButton.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-           submitButton.backgroundColor = UIColor.orange
-           submitButton.setTitle("SUBMIT", for: .normal)
-           submitButton.center.x = self.view.center.x
-           submitButton.center.y = self.view.center.y + 60
-           submitButton.addTarget(self, action:#selector(self.submitButtonClicked), for: .touchUpInside)
-         
-           view.addSubview(submitButton)
+    }
+    
+    func setUpInputText() {
+        
+        inputText.backgroundColor = UIColor.white
+        inputText.textAlignment =  NSTextAlignment.center
+        let placeholder = NSAttributedString(string: TCConstants.TyreStrings.InputTextPlaceholder.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
+        inputText.attributedPlaceholder = placeholder
+      
+        view.addSubview(inputText)
+        inputText.width(inputTextWidth)
+        inputText.height(inputTextHeight)
+        inputText.centerX(to: view)
+        inputText.centerY(to: view)
     }
     
     @objc func submitButtonClicked() {
@@ -75,18 +97,7 @@ class CheckTyreView: UIViewController {
         }
     }
     
-    func setUpInputText() {
-        
-        inputText.frame = CGRect(x: 0, y: 0, width: 200, height: 50)
-        inputText.backgroundColor = UIColor.white
-        inputText.textAlignment =  NSTextAlignment.center
-        let placeholder = NSAttributedString(string: TCConstants.TyreStrings.InputTextPlaceholder.rawValue, attributes: [NSAttributedString.Key.foregroundColor : UIColor.black])
-        inputText.attributedPlaceholder = placeholder
-        inputText.center.x = self.view.center.x // for horizontal
-        inputText.center.y = self.view.center.y // for vertical
-      
-        view.addSubview(inputText)
-    }
+    
     
     func setBackgroundImageView() {
         
@@ -94,14 +105,15 @@ class CheckTyreView: UIViewController {
           backgroundImageView.image = UIImage(named: "bg_sm")
         
           view.addSubview(backgroundImageView)
-        
-          backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-
-          backgroundImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-          backgroundImageView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
-          backgroundImageView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
-          backgroundImageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
+          
+          backgroundImageView.edgesToSuperview(isActive: true, usingSafeArea: true)
+//          backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
+//
+//          backgroundImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+//          backgroundImageView.leftAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leftAnchor).isActive = true
+//          backgroundImageView.rightAnchor.constraint(equalTo: view.safeAreaLayoutGuide.rightAnchor).isActive = true
+//          backgroundImageView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+//
    }
 
 

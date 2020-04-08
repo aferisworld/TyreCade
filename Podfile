@@ -11,6 +11,7 @@ target 'TyreCade' do
    pod 'RealmSwift', '~> 3.20.0'
    pod 'PromiseKit', '~> 6.0'
    pod 'PromiseKit/Alamofire', '~> 6.0'
+   pod 'TinyConstraints'
       
   target 'TyreCadeTests' do
     use_frameworks!
