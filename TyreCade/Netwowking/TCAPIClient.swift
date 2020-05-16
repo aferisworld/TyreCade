@@ -71,8 +71,8 @@ class TCAPIClient {
      
      - Paramter thisRequest: The request to be removed
      
-     - author Nelson Klutse
-     - note Last editored by Nelson Klutse
+     - author Nana Aferi
+     - note Last editored by Nana Aferi
      */
     
     func removeThisRequest(thisRequest: DataRequest){
